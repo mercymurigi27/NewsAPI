@@ -47,7 +47,7 @@ def get_articles(id):
         article_response = json.loads(article_data)
         print(article_response)
         
-        article_object = None
+        # article_object = None
         article_results = None
         
         if article_response:
@@ -57,7 +57,7 @@ def get_articles(id):
             url = article_response.get("url")
             time = article_response.get("publishedAt")
 
-            article_object = Article(image,title, desc, url, time)
+            # article_object = Article(image,title, desc, url, time)
         
     if article_response["articles"]:
             article_results_list = article_response["articles"]
@@ -69,11 +69,11 @@ def get_articles(id):
             
 def process_results(source_list):
     '''
-    Function  that processes the movie result and transform them to a list of Objects
+    Function  that processes the sources result and transform them to a list of Objects
     Args:
-        movie_list: A list of dictionaries that contain movie details
+        source_list: A list of dictionaries that contain movie details
     Returns :
-        movie_results: A list of movie objects
+        source_results: A list of sources objects
     '''
     source_results = []
     
@@ -91,11 +91,11 @@ def process_results(source_list):
 
 def process_articles(article_list):
     '''
-    Function  that processes the movie result and transform them to a list of Objects
+    Function  that processes the articles result and transform them to a list of Objects
     Args:
-        movie_list: A list of dictionaries that contain movie details
+        articles_list: A list of dictionaries that contain movie details
     Returns :
-        movie_results: A list of movie objects
+        articles_results: A list of articles objects
     '''
     article_results = []
     

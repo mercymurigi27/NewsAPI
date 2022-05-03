@@ -15,3 +15,27 @@
     {% endfor %}
     
 {% endmacro %}
+
+{% macro displayArticleList(article_list) %}
+    {% for article in article_list %}
+        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-4 article-card">
+            <ul liststyle="none">
+            <li class="text-center" >
+                <img src=" {{ article.image }} " alt="article-image">
+                <br>
+                <a href="{{article.url}}">
+                    {{ article.title}}</a>
+                    <br>
+                <span> {{ article.desc }} </span>
+                <br>
+                <span> posted on,
+                    <br>
+                    {{ article.time }} 
+                </span>
+            </li>
+            </ul>
+        </div>
+
+    {% endfor %}
+
+{% endmacro %}

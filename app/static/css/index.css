@@ -1,0 +1,15 @@
+*{
+    padding: 30px;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+h1{
+    font-weight: bold;
+    color: brown;
+    font-size: 20pt;
+    margin-left: 36pc;
+}
+img{
+    height: 200px;
+}
